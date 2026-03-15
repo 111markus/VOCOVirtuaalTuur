@@ -1,0 +1,66 @@
+@import "tailwindcss";
+
+/* ============================================
+   CUSTOM THEME — VOCO style
+   ============================================ */
+@theme {
+  --color-voco-magenta: #C72C7A;
+  --color-voco-red: #E74C3C;
+  --color-voco-teal: #1ABC9C;
+  --color-voco-orange: #F39C12;
+  --color-voco-cyan: #3498DB;
+  --color-voco-black: #1A1A1A;
+}
+
+/* ============================================
+   BASE STYLES (after Tailwind preflight)
+   ============================================ */
+@layer base {
+  html, body {
+    height: 100%;
+    overflow: hidden;
+  }
+
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #F5F5F5;
+    color: #1A1A1A;
+  }
+
+  #root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  /* Fix button sizing for Tailwind v4 */
+  button {
+    line-height: 1;
+  }
+}
+
+/* ============================================
+   KEYFRAME ANIMATIONS
+   ============================================ */
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.97); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
