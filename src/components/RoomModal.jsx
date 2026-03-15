@@ -10,7 +10,7 @@ export default function RoomModal({ roomId, onClose }) {
     (e) => {
       if (e.key === "Escape") onClose();
     },
-    [onClose]
+    [onClose],
   );
 
   useEffect(() => {
@@ -45,8 +45,7 @@ export default function RoomModal({ roomId, onClose }) {
         {/* Päis – must riba */}
         <div className="flex items-center justify-between px-5 py-4 bg-[#1A1A1A]">
           <h2 className="text-base font-bold text-white tracking-wide">
-            Klass{" "}
-            <span className="text-[#C72C7A]">{roomId}</span>
+            Klass <span className="text-[#C72C7A]">{roomId}</span>
           </h2>
           <button
             onClick={onClose}

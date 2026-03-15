@@ -33,10 +33,12 @@ export default function FloorSelector({ floors, activeFloor, onSelect }) {
               }
             `}
           >
-            <span className={`
+            <span
+              className={`
               w-2 h-2 rounded-full shrink-0 transition-colors
               ${isActive ? "bg-white" : `${color.bg} opacity-40`}
-            `} />
+            `}
+            />
             Korrus {num}
           </button>
         );

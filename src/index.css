@@ -4,29 +4,35 @@
    CUSTOM THEME — VOCO style
    ============================================ */
 @theme {
-  --color-voco-magenta: #C72C7A;
-  --color-voco-red: #E74C3C;
-  --color-voco-teal: #1ABC9C;
-  --color-voco-orange: #F39C12;
-  --color-voco-cyan: #3498DB;
-  --color-voco-black: #1A1A1A;
+  --color-voco-magenta: #c72c7a;
+  --color-voco-red: #e74c3c;
+  --color-voco-teal: #1abc9c;
+  --color-voco-orange: #f39c12;
+  --color-voco-cyan: #3498db;
+  --color-voco-black: #1a1a1a;
 }
 
 /* ============================================
    BASE STYLES (after Tailwind preflight)
    ============================================ */
 @layer base {
-  html, body {
+  html,
+  body {
     height: 100%;
     overflow: hidden;
   }
 
   body {
-    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, sans-serif;
+    font-family:
+      "Roboto",
+      ui-sans-serif,
+      system-ui,
+      -apple-system,
+      sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background: #F5F5F5;
-    color: #1A1A1A;
+    background: #f5f5f5;
+    color: #1a1a1a;
   }
 
   #root {
@@ -46,21 +52,43 @@
    KEYFRAME ANIMATIONS
    ============================================ */
 @keyframes fadeInUp {
-  from { opacity: 0; transform: translateY(14px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 @keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes scaleIn {
-  from { opacity: 0; transform: translateY(20px) scale(0.97); }
-  to   { opacity: 1; transform: translateY(0) scale(1); }
+  from {
+    opacity: 0;
+    transform: translateY(20px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 @keyframes slideDown {
-  from { opacity: 0; transform: translateY(-10px); }
-  to   { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }

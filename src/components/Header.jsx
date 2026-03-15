@@ -1,33 +1,36 @@
 /**
  * Header – VOCO stiilis must header.
- * Must taust, valge tekst, VOCO logo/nimi.
+ * Must taust, VOCO logo pildina. Stiil nagu voco.ee.
  */
+
+import vocoLogo from "../images/voco-logo-04-3.png";
 
 export default function Header() {
   return (
-    <header className="w-full self-stretch bg-[#1A1A1A] px-6 py-4 flex items-center justify-between sticky top-0 z-40 shadow-lg">
-      {/* Logo + nimi */}
-      <div className="flex items-center gap-3">
-        {/* VOCO-stiilis logo märk */}
-        <div className="flex items-center gap-0.5">
-          <div className="grid grid-cols-2 gap-[3px]">
-            <div className="w-3.5 h-3.5 rounded-full bg-white" />
-            <div className="w-3.5 h-3.5 rounded-full border-2 border-white" />
-            <div className="w-3.5 h-3.5 rounded-full border-2 border-white" />
-            <div className="w-3.5 h-3.5 rounded-full bg-white" />
-          </div>
-        </div>
-        <div className="leading-tight">
-          <p className="text-white font-bold text-sm tracking-wide">TARTU RAKENDUSLIK KOLLEDŽ</p>
-          <p className="text-neutral-400 text-[10px] tracking-[0.15em] uppercase">Tartu Vocational College</p>
-        </div>
-      </div>
+    <header
+      className="w-full self-stretch bg-[#1A1A1A] px-16 flex items-center justify-between sticky top-0 z-40"
+      style={{ minHeight: "90px" }}
+    >
+      {/* Logo */}
+      <a href="/" onClick={(e) => { e.preventDefault(); window.scrollTo(0, 0); }}>
+        <img
+          src={vocoLogo}
+          alt="VOCO – Tartu Rakenduslik Kolledž"
+          className="h-[60px]"
+        />
+      </a>
 
-      {/* Nav placeholder */}
-      <nav className="hidden sm:flex items-center gap-6">
-        <span className="text-white/70 text-xs font-medium hover:text-white transition cursor-default">Avatud uksed</span>
-        <span className="text-white text-xs font-semibold border-b-2 border-[#C72C7A] pb-0.5 cursor-default">Klassiruumid</span>
-        <span className="text-white/70 text-xs font-medium hover:text-white transition cursor-default">Kontakt</span>
+      {/* Nav */}
+      <nav className="hidden md:flex items-center gap-14">
+        <a href="https://voco.ee/tunniplaan/" target="_blank" rel="noopener noreferrer" className="text-white text-[16px] font-light tracking-wide hover:text-white/80 transition">
+          Tunniplaan
+        </a>
+        <span className="text-white text-[16px] font-light tracking-wide border-b-2 border-transparent hover:border-[#C72C7A] pb-0.5 transition cursor-default">
+          Klassiruumid
+        </span>
+        <span className="text-white text-[16px] font-light tracking-wide hover:text-white/80 transition cursor-default">
+          Kontakt
+        </span>
       </nav>
     </header>
   );
